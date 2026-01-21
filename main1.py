@@ -14,7 +14,7 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Use an environment variable for security
-API_KEY = os.environ.get("AIzaSyCxhIG-zkkf83qdvmynPMScFYySVd1sd2Y") 
+API_KEY = os.environ.get("Enter your API key") 
 client = genai.Client(api_key=API_KEY)
 
 # This defines the UI for your browser
@@ -551,4 +551,5 @@ def analyze():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
+
     app.run(debug=True, port=8080)
